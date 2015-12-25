@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nabeatsu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,69 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="usual.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JN4-AZ-aVm">
+                                <rect key="frame" x="78" y="260" width="445" height="326"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="445" id="pqJ-Ez-hmr"/>
+                                    <constraint firstAttribute="height" constant="326" id="yEz-N6-fHS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="世界のナベアツさんっ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qev-kV-Nly">
+                                <rect key="frame" x="159" y="28" width="282" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="8Ca-sI-JPm"/>
+                                    <constraint firstAttribute="height" constant="45" id="ZSm-cO-Sv9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m27-6a-Rsj">
+                                <rect key="frame" x="151" y="182" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EbQ-Cd-lZa"/>
+                                    <constraint firstAttribute="height" constant="21" id="hgs-6G-7yJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sk8-p2-Srp">
+                                <rect key="frame" x="243" y="104" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="0ls-EL-52W"/>
+                                    <constraint firstAttribute="height" constant="30" id="dKT-hv-eg5"/>
+                                </constraints>
+                                <state key="normal" title="カウントアップ!!"/>
+                                <connections>
+                                    <action selector="countUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHv-D0-gc2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m27-6a-Rsj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="3Ea-fV-QBY"/>
+                            <constraint firstItem="Qev-kV-Nly" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ig-Hf-9wO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JN4-AZ-aVm" secondAttribute="bottom" constant="14" id="9Es-zo-jIB"/>
+                            <constraint firstItem="sk8-p2-Srp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HQA-n5-cvw"/>
+                            <constraint firstItem="m27-6a-Rsj" firstAttribute="top" secondItem="sk8-p2-Srp" secondAttribute="bottom" constant="48" id="LnK-o5-SIz"/>
+                            <constraint firstItem="JN4-AZ-aVm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sxg-Qb-PQU"/>
+                            <constraint firstItem="sk8-p2-Srp" firstAttribute="top" secondItem="Qev-kV-Nly" secondAttribute="bottom" constant="31" id="Zd2-S0-PKz"/>
+                            <constraint firstItem="Qev-kV-Nly" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="aBo-L9-0uf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="JN4-AZ-aVm" id="RLD-f0-udz"/>
+                        <outlet property="output" destination="m27-6a-Rsj" id="E7D-Gk-nxE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="usual.jpg" width="199" height="156"/>
+    </resources>
 </document>
